@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% block content %}
+
+    <h1>登録情報の削除</h1>
+    <p>'{{object.name}}'を本当に削除しますか？</p>
+    <form action='' method='post'>{% csrf_token %}
+        <button type='submit' class = 'submit delete'>削除します</button>
+    </form>
+
+    <div>
+        <p><a href='JavaScript:history.back()'>&lt; 一つ前にもどる</a></p>
+    </div>
+
+{% endblock %}
